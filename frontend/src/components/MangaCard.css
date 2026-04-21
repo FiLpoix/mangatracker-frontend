@@ -1,0 +1,138 @@
+.manga-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.manga-card:hover {
+  transform: translateY(-3px);
+  border-color: #3a3a42;
+}
+
+.manga-card--editing {
+  border-color: var(--red-dim);
+}
+
+/* Cover */
+.manga-card__cover {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  background: var(--bg-hover);
+}
+
+.manga-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.manga-card:hover .manga-card__cover img {
+  transform: scale(1.04);
+}
+
+.manga-card__cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--text-dim);
+}
+
+.manga-card__cover .badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}
+
+/* Body */
+.manga-card__body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.manga-card__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.manga-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.manga-card__type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.manga-card__score {
+  font-size: 0.78rem;
+  color: #f0c04c;
+  font-weight: 600;
+}
+
+.manga-card__chapter {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Actions */
+.manga-card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.manga-card__actions .btn {
+  flex: 1;
+  padding: 7px 10px;
+  font-size: 0.8rem;
+}
+
+/* Edit form */
+.manga-card__edit {
+  margin-top: 8px;
+}
+
+.manga-card__edit .form-group {
+  margin-bottom: 10px;
+}
+
+.manga-card__edit .form-group input,
+.manga-card__edit .form-group select {
+  padding: 7px 10px;
+  font-size: 0.85rem;
+}
+
+.manga-card__edit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.manga-card__edit-actions .btn {
+  flex: 1;
+  padding: 7px 10px;
+  font-size: 0.82rem;
+}
