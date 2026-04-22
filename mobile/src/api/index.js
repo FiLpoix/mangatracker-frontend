@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 // Troque pelo IP da sua máquina quando testar no celular físico
 // Ex: 'http://192.168.1.100:8000'
 // Em produção: 'https://sua-api.onrender.com'
-const BASE_URL = 'http://192.168.0.167:8000' // 10.0.2.2 = localhost no emulador Android
+const BASE_URL = 'https://manga-tracker-api.onrender.com' // 10.0.2.2 = localhost no emulador Android
 
 const api = axios.create({ baseURL: BASE_URL })
 
