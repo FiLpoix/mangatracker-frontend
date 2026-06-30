@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "mobile",
+    "name": "mangaTracker",
     "slug": "mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/HatsuneMiku.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
@@ -17,13 +17,21 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/HatsuneMiku.png",
+        "backgroundColor": "#0d0d0e"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.lfilpo.mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b1279199-79f2-46da-bba8-136af046c013"
+      }
+    },
+    "plugins": [
+      "expo-status-bar"
+    ]
   }
 }
